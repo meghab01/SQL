@@ -1,0 +1,8 @@
+//correlated subquery - inner feeds from outer
+select first_name, last_name, salary, d.name from employees as e
+join departments d
+on e.department_id = d.id
+where salary>
+(select avg(salary)
+ from employees
+ where department_id = e.department_id)
