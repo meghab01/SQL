@@ -6,3 +6,6 @@ where salary>
 (select avg(salary)
  from employees
  where department_id = e.department_id)
+ 
+ //coalesce replaces null with 0
+ sum(coalesce (salary, 0))
