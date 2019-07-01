@@ -9,3 +9,7 @@ where salary>
  
  //coalesce replaces null with 0
  sum(coalesce (salary, 0))
+ 
+ //date ops
+ select * from projects
+where start_date between '2011-07-01' and '2011-07-31'
