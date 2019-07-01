@@ -16,3 +16,7 @@ where start_date between '2011-07-01' and '2011-07-31'
 
 select * from projects
 where datediff(start_date, '2011-07-31')<0
+
+//limit with offset (index starting 1) and total rows
+
+  SELECT order_count FROM customer_order_counts ORDER BY order_count DESC LIMIT N-1, 1
