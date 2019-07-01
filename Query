@@ -13,3 +13,6 @@ where salary>
  //date ops
  select * from projects
 where start_date between '2011-07-01' and '2011-07-31'
+
+select * from projects
+where datediff(start_date, '2011-07-31')<0
