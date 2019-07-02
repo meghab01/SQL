@@ -20,3 +20,13 @@ where datediff(start_date, '2011-07-31')<0
 //limit with offset (index starting 1) and total rows
 
   SELECT order_count FROM customer_order_counts ORDER BY order_count DESC LIMIT N-1, 1
+
+// case statement
+
+select 
+case when d.name = "Engineering" then coalesce(e.first_name,'Fill') end as Eng,
+case when d.name = "Marketing" then e.first_name end as Mark
+from departments d 
+join employees e
+on d.id= e.department_id
+where e.first_name is not null
