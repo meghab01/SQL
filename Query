@@ -30,3 +30,15 @@ from departments d
 join employees e
 on d.id= e.department_id
 where e.first_name is not null
+
+// select in select, IF
+
+select 
+if (first_name='John',null, first_name) as FN,
+DNAME, department_id from
+(
+select first_name,
+(select name from departments where id = department_id) as DNAME,
+department_id from employees
+  ) as temp
+
