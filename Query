@@ -65,3 +65,4 @@ insert into tri values(
 #   end as TRI_TYPE,
 # A,B,C
 # from tri
+
