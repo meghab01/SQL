@@ -55,3 +55,13 @@ insert into tri values(
   20,21,22
   13,14,30
   )
+  //identify type of triange
+  # select 
+# case 
+#   when A=B and A=B and A=C then "Equilateral"
+#   when A=B or B=C or A=C then "Isosceles"
+#   when A<>B<>C then "Scalene"
+#   when A+B "Not Triangle"
+#   end as TRI_TYPE,
+# A,B,C
+# from tri
